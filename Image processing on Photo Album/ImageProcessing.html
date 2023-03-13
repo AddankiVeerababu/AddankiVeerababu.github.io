@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Gallary
+    </title>
+<style>
+    
+div.gallery {
+  margin: 100px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+<style>
+  img {
+    border-radius: 50%;
+  }
+</style>
+<style>
+  .reddish {
+    filter: hue-rotate(45deg) brightness(80%);
+  }
+  .greenish {
+    filter: hue-rotate(135deg) brightness(80%);
+  }
+  .blueish {
+    filter: hue-rotate(-135deg) brightness(80%);
+  }
+</style>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+</head>
+<h1>IMAGE GALLARY<h1>
+
+<body style="background-color:rgba(71, 200, 255, 0.8);">
+ 
+  <div class="gallery">
+    <a target="_blank" href="1.jpg">
+      <img id="image" src="1.jpg" alt="Cinque Terre" class="image" width="1000" height="400">
+    </a>
+  
+  <button onclick="duplicateImage('1.jpg')">Duplicate</button>
+  <button onclick="makeGrayscale('1.jpg')">Make grayscale</button>
+  <button onclick="increaseBrightness('1.jpg', 50); ">Brightness</button>
+  <button onclick="createAvatar('1.jpg')">Create Avatar</button>
+  <button onclick="reduceResolution('1.jpg', 4)">Reduce Resolution </button><br>
+ </div>
+<div class="gallery">
+    <a target="_blank" href="3.jpg">
+      <img src="3.jpg" alt="Cinque Terre" class="image" width="1000" height="400">
+    </a>
+    <button onclick="duplicateImage('3.jpg')">Duplicate</button>
+    <button onclick="makeGrayscale('3.jpg')">Make grayscale</button>
+    <button onclick="increaseBrightness('3.jpg', 50); ">Brightness</button>
+    <button onclick="createAvatar('3.jpg')">Create Avatar</button>
+    <button onclick="reduceResolution('3.jpg', 4)">Reduce Resolution </button>
+
+  </div>
+<div class="gallery">
+    <a target="_blank" href="6.jpg">
+      <img src="6.jpg" alt="Cinque Terre" class="image" width="1000" height="400">
+    </a>
+    <button onclick="duplicateImage('6.jpg')">Duplicate</button>
+    <button onclick="makeGrayscale('6.jpg')">Make grayscale</button>
+    <button onclick="increaseBrightness('6.jpg', 50); ">Brightness</button>
+    <button onclick="createAvatar('6.jpg')">Create Avatar</button>
+    <button onclick="reduceResolution('6.jpg', 4)">Reduce Resolution </button>
+
+  </div>
+  
+  
+  <div class="gallery">
+    <a target="_blank" href="4.jpg">
+      <img src="4.jpg" alt="Cinque Terre" class="image" width="1000" height="400">
+    </a>
+    <button onclick="duplicateImage('4.jpg')">Duplicate</button>
+    <button onclick="makeGrayscale('4.jpg')">Make grayscale</button>
+    <button onclick="increaseBrightness('4.jpg', 50); ">Brightness</button>
+    <button onclick="createAvatar('4.jpg')">Create Avatar</button>
+    <button onclick="reduceResolution('4.jpg', 4)">Reduce Resolution </button>
+
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="5.jpg">
+      <img src="5.jpg" alt="Cinque Terre" class="image" width="1000" height="400">
+    </a>
+    <button onclick="duplicateImage('5.jpg')">Duplicate</button>
+    <button onclick="makeGrayscale('5.jpg')">Make grayscale</button>
+    <button onclick="increaseBrightness('5.jpg', 50); ">Brightness</button>
+    <button onclick="createAvatar('5.jpg')">Create Avatar</button>
+        <button onclick="reduceResolution('5.jpg', 4)">Reduce Resolution </button>
+
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="2.jpg">
+      <img src="2.jpg" alt="Cinque Terre"  class="image" width="1000" height="400">
+    </a>
+    <button onclick="duplicateImage('2.jpg')">Duplicate</button>
+    <button onclick="makeGrayscale('2.jpg')">Make grayscale</button>
+    <button onclick="increaseBrightness('2.jpg', 50); ">Brightness</button>
+    <button onclick="createAvatar('2.jpg')">Create Avatar</button>
+    <button onclick="reduceResolution('2.jpg', 4)">Reduce Resolution </button>
+    
+  </div>
+  <br>
+  <h2> COLOUR  FILTER</h2>
+  <form>
+    <label for="filter">Change the colour:</label>
+    <select id="filter" name="filter">
+      <option value="reddish">Reddish</option>
+      <option value="greenish">Greenish</option>
+      <option value="blueish">Blueish</option>
+    </select>
+    <button type="button" onclick="applyFilter()">Apply</button>
+  </form>
+  <h2> Thumbnail</h2>
+</div>
+
+<select id="thumbnailSelect" onchange="showThumbnail()">
+  <option value="1.jpg">Amrita University</option>
+  <option value="2.jpg">Tiger</option>
+  <option value="3.jpg">Car</option>
+  <option value="4.jpg">Bike</option>
+  <option value="5.jpg">peacock</option>
+  <option value="6.jpg">Butterfly</option>
+</select>
+
+<div id="thumbnailContainer"></div>
+  <div>
+    <h2> QR code</h2>
+   
+    <select id="image">
+      <option value="1.jpg">Amrita University</option>
+      <option value="2.jpg">Tiger</option>
+      <option value="3.jpg">Car</option>
+      <option value="4.jpg">Bike</option>
+      <option value="5.jpg">peacock</option>
+      <option value="6.jpg">Butterfly</option>
+    </select>
+    <button onclick="generateQRCode()">Generate QR Code</button>
+  </div>
+  <div id="qrcode"></div>
+ <script>
+    function duplicateImage(imageSrc) {
+      // Find the image element with the corresponding src attribute
+      const originalImage = document.querySelector(`img[src="${imageSrc}"]`);
+      
+      // Create a clone of the image element
+      const clonedImage = originalImage.cloneNode(true);
+      
+      // Add the cloned image to the DOM
+      const galleryDiv = originalImage.closest('.gallery');
+      galleryDiv.insertBefore(clonedImage, galleryDiv.lastChild);
+    }
+    
+    function makeGrayscale(imageSrc) {
+      // Find the image element with the corresponding src attribute
+      const image = document.querySelector(`img[src="${imageSrc}"]`);
+      
+      // Set the CSS filter property to grayscale
+      image.style.filter = "grayscale(100%)";
+    }
+    function increaseBrightness(imageSrc, brightnessLevel) {
+  // Find the image element with the corresponding src attribute
+  const image = document.querySelector(`img[src="${imageSrc}"]`);
+  
+  // Create a canvas element
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  // Set the canvas dimensions to match the image dimensions
+  canvas.width = image.width;
+  canvas.height = image.height;
+  
+  // Draw the image onto the canvas
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  
+  // Get the image data from the canvas
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  
+  // Adjust the brightness of each pixel
+  for (let i = 0; i < data.length; i += 4) {
+    data[i] += brightnessLevel; // red
+    data[i + 1] += brightnessLevel; // green
+    data[i + 2] += brightnessLevel; // blue
+  }
+  
+  // Put the modified image data back onto the canvas
+  ctx.putImageData(imageData, 0, 0);
+  
+  // Set the image src to the modified canvas data
+  image.src = canvas.toDataURL();
+}
+function generateQRCode() {
+      const imageSrc = document.getElementById("image").value;
+      const qr = new QRious({
+        value: imageSrc,
+        size: 250
+      });
+      const qrcodeDiv = document.getElementById("qrcode");
+      qrcodeDiv.innerHTML = "";
+      qrcodeDiv.appendChild(qr.image);
+    }
+    function createAvatar(imageSrc) {
+  // Find the image element with the corresponding src attribute
+  const originalImage = document.querySelector(`img[src="${imageSrc}"]`);
+
+  // Create a canvas element
+  const canvas = document.createElement('canvas');
+
+  // Set the canvas dimensions to match the image
+  canvas.width = originalImage.width;
+  canvas.height = originalImage.height;
+
+  // Get the canvas context and draw the image on it
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(originalImage, 0, 0);
+
+  // Create a new image element with the canvas data as the source
+  const avatarImage = new Image();
+  avatarImage.src = canvas.toDataURL();
+
+  // Set the border-radius CSS property to make the image circular
+  avatarImage.style.borderRadius = '50%';
+
+  // Add the new image element to the DOM
+  const galleryDiv = originalImage.closest('.gallery');
+  galleryDiv.insertBefore(avatarImage, galleryDiv.lastChild);
+}
+function reduceResolution(imageSrc, reductionFactor) {
+      // Find the image element with the corresponding src attribute
+      const image = document.querySelector(`img[src="${imageSrc}"]`);
+
+      // Create a canvas element and draw the image onto it at the reduced resolution
+      const canvas = document.createElement('canvas');
+      canvas.width = image.width / reductionFactor;
+      canvas.height = image.height / reductionFactor;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      // Set the src attribute of the image element to the data URL of the canvas
+      image.src = canvas.toDataURL();
+    }
+    function showThumbnail() {
+      const selectElement = document.getElementById('thumbnailSelect');
+      const selectedValue = selectElement.value;
+      const selectedImage = document.querySelector(`img[src="${selectedValue}"]`);
+
+      const thumbnailContainer = document.getElementById('thumbnailContainer');
+      thumbnailContainer.innerHTML = '';
+      
+      const thumbnailImage = selectedImage.cloneNode(true);
+      thumbnailImage.width = 100;
+      thumbnailImage.height = 100;
+
+      thumbnailContainer.appendChild(thumbnailImage);
+    }
+    function duplicateImage(imageSrc) {
+      // Find the image element with the corresponding src attribute
+      const originalImage = document.querySelector(`img[src="${imageSrc}"]`);
+      
+      // Create a clone of the image element
+      const clonedImage = originalImage.cloneNode(true);
+      
+      // Add the cloned image to the DOM
+      const galleryDiv = originalImage.closest('.gallery');
+      galleryDiv.insertBefore(clonedImage, galleryDiv.lastChild);
+    }
+      
+    function applyFilter() {
+    var filter = document.getElementById("filter").value;
+    var images = document.getElementsByClassName("image");
+
+    for (var i = 0; i < images.length; i++) {
+      images[i].classList.remove("reddish", "greenish", "blueish");
+      images[i].classList.add(filter);
+    }
+  }
+ 
+    
+    
+
+
+  </script>
+</body>
+</html>
