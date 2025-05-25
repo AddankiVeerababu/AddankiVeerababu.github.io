@@ -39,5 +39,56 @@ Built entirely with **HTML, CSS, and JavaScript**, this game demonstrates DOM ma
 - Colored boxes provide immediate visual clues.
 - `rules.svg` is shown to help users understand the mechanics.
 
+# 🖼️ Interactive Image Processing Gallery – Web Project
+
+This project is a dynamic **image gallery web application** that allows users to perform real-time **image processing tasks** directly in the browser using **HTML, CSS, and JavaScript**. It includes features such as grayscale conversion, brightness control, image duplication, QR code generation, resolution adjustment, and avatar creation.
+
+---
+
+## 🎯 Project Highlights
+
+- 📸 **Image Gallery** with multiple sample images
+- 🎨 **On-Click Image Processing**: Apply grayscale, brightness boost, resolution reduction
+- 🌀 **Circular Avatar Generation** from any image
+- 💡 **Color Filters**: Reddish, Greenish, Blueish using CSS filters
+- 📦 **Thumbnail Preview** from dropdown menu
+- 📲 **QR Code Generator** for image URLs using `qrious.js`
+
+---
+
+## 🧠 Features Explained
+
+### 🖼️ Image Display & Hover
+Each image in the gallery:
+- Can be previewed in full size.
+- Has individual processing buttons.
+- Displays hover effects via CSS.
+
+### 🛠️ Image Processing Options
+
+| Feature | Description |
+|--------|-------------|
+| **Duplicate** | Clones the selected image and adds it to the gallery. |
+| **Grayscale** | Converts the image to black & white using CSS filters. |
+| **Brightness** | Increases brightness using pixel manipulation on `<canvas>`. |
+| **Avatar** | Creates a circular version of the image (rounded with `border-radius: 50%`). |
+| **Resolution Reduction** | Lowers image resolution using `<canvas>` rescaling. |
+
+### 🎛️ Filter Effects
+You can apply hue-based filters to all images:
+- 🔴 Reddish
+- 🟢 Greenish
+- 🔵 Blueish
+
+### 🧩 Thumbnails
+Dropdown lets you:
+- Choose an image by name
+- Preview it as a 100×100 thumbnail
+
+### 🔳 QR Code Generator
+- Converts the selected image filename into a **scannable QR code**.
+- Useful for linking to images or using them in other apps.
+
+
 
 
