@@ -1,4 +1,4 @@
-# 🔠 Wordle-Inspired Word Guessing Game
+# 🔠 Building Wordle game
 
 This is a fun, interactive browser-based word game inspired by the popular game **Wordle**. The player must guess a randomly selected 5-letter English word in six tries or less. After each guess, the letters are marked with colors to indicate how close the guess was to the target word.
 
