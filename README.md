@@ -89,6 +89,67 @@ Dropdown lets you:
 - Converts the selected image filename into a **scannable QR code**.
 - Useful for linking to images or using them in other apps.
 
+# ❌⭕ Tic Tac Toe – JavaScript Game Project
+
+Welcome to **Tic Tac Toe**, a fully interactive and web-based game where you can challenge a friend or take on an unbeatable computer opponent! Designed using **HTML5 Canvas**, styled with **CSS3**, and powered by **pure JavaScript**, this game combines simplicity, fun, and smart AI for an engaging experience.
+
+---
+
+## 📖 About the Project
+
+This project simulates the classic **Tic Tac Toe (also known as Noughts and Crosses)** game. It features both **single-player mode (vs. AI)** and **double-player mode (local multiplayer)**, allowing users to enjoy the game with a friend or challenge themselves against a computer opponent that uses the **Minimax algorithm**.
+
+This game was built as a personal learning project and serves as a strong example of DOM manipulation, HTML5 canvas drawing, game loops, condition checking, and AI integration.
+
+---
+
+## 🎮 Gameplay Overview
+
+- The game is played on a **3x3 grid**.
+- Player 1 and Player 2 (or the Computer) take turns placing **X or O**.
+- The first player to get three of their marks in a **horizontal, vertical, or diagonal** row wins.
+- If all 9 squares are filled and no player has won, the game ends in a **tie**.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|--------|-------------|
+| ✅ **Single Player Mode** | Play against a smart computer opponent (Minimax AI). |
+| ✅ **Two Player Mode** | Play locally against a friend on the same device. |
+| ❌⭕ **Symbol Selection** | Choose whether to play as X or O. |
+| 🎨 **Canvas Rendering** | Game board and moves rendered on HTML5 `<canvas>`. |
+| 🎉 **Game Over Screen** | Animated result screen shows winner or tie and offers "New Game" button. |
+| 🧠 **Unbeatable AI** | Computer uses Minimax algorithm for perfect play. |
+| 🖼️ **Image Assets** | Custom icons (e.g., `X.png`, `O.png`) for gameplay visuals. |
+| 💻 **Responsive Layout** | Easily playable on laptops and desktops. |
+| 🪄 **Smooth UI Transitions** | Hover effects, active states, and feedback visuals. |
+
+---
+
+## 🧠 AI: How the Computer Thinks
+
+In **Single Player Mode**, the computer opponent is powered by the **Minimax Algorithm**:
+- Evaluates every possible move and counter-move.
+- Calculates a numerical score for win/loss/tie outcomes.
+- Picks the best move based on scoring.
+- Guarantees **perfect play** — you can never beat it, only tie or lose if you make a mistake.
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Role |
+|------------|------|
+| **HTML5**  | Base structure and game canvas |
+| **CSS3**   | Styling, layout, buttons, hover animations |
+| **JavaScript** | Game logic, AI, state management, canvas drawing |
+| **Canvas API** | Grid rendering and image placement |
+| **Minimax Algorithm** | AI strategy for unbeatable moves |
+
+
+
 
 
 
